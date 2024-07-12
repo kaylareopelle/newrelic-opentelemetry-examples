@@ -7,6 +7,22 @@ ruby '3.2.2'
 gem 'sinatra', '~> 3.0.6'
 gem 'thin', '~> 1.8.2'
 
-gem 'opentelemetry-sdk', '~> 1.2.1'
-gem 'opentelemetry-exporter-otlp', '~> 0.25.0'
-gem 'opentelemetry-instrumentation-all', '~> 0.39.1'
+gem 'opentelemetry-exporter-otlp'
+gem 'opentelemetry-instrumentation-all'
+
+gem 'opentelemetry-sdk', path: '/Users/kreopelle/dev/opentelemetry-ruby/sdk'
+
+gem 'opentelemetry-metrics-api', path: '/Users/kreopelle/dev/opentelemetry-ruby/metrics_api'
+
+gem 'opentelemetry-metrics-sdk', path: '/Users/kreopelle/dev/opentelemetry-ruby/metrics_sdk'
+
+gem 'opentelemetry-exporter-otlp-metrics', path: '/Users/kreopelle/dev/opentelemetry-ruby/exporter/otlp-metrics'
+
+# # Install the gem from a branch. I'm tinkering with the open PRs
+# # in a branch called `metrics-everything` that should be accessible from the github source 'kaylareopelle/opentelemetry-ruby
+# gem 'opentelemetry-metrics-api', github: 'open-telemetry/opentelemetry-ruby', branch: 'main', glob: 'metrics_api/*.gemspec'
+
+# gem 'opentelemetry-metrics-sdk', github: 'open-telemetry/opentelemetry-ruby', branch: 'main', glob: 'metrics_sdk/*.gemspec'
+
+# gem 'opentelemetry-exporter-otlp-metrics', github: 'open-telemetry/opentelemetry-ruby', branch: 'main', glob: 'exporter/otlp-metrics/*.gemspec'
+
