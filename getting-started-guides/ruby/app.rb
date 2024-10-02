@@ -24,6 +24,8 @@ class App < Sinatra::Base
   error Fibonacci::RangeError do
     status 400
     OpenTelemetry::Trace.current_span.record_exception(env['sinatra.error'])
+    Fibonacci.fibonacci_invocations.add(1, attributes: {'fibonacci.valid.n': false})
+
     env['sinatra.error'].message
   end
 end
