@@ -28,37 +28,26 @@ GIT
     opentelemetry-instrumentation-sinatra (0.24.1)
       opentelemetry-api (~> 1.0)
 
-GIT
-  remote: https://github.com/kaylareopelle/opentelemetry-ruby.git
-  revision: ed080e53c3a269abb1fcc42448919a922a86aff8
-  branch: temporality-preference-fix
-  glob: metrics_sdk/*.gemspec
-  specs:
-    opentelemetry-metrics-sdk (0.2.0)
-      opentelemetry-api (~> 1.1)
-      opentelemetry-metrics-api
-      opentelemetry-sdk (~> 1.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
     bigdecimal (3.1.8)
     daemons (1.4.1)
     eventmachine (1.2.7)
-    google-protobuf (4.28.2-arm64-darwin)
+    google-protobuf (4.28.3-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.28.2-x86_64-darwin)
+    google-protobuf (4.28.3-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.28.2-x86_64-linux)
+    google-protobuf (4.28.3-x86_64-linux)
       bigdecimal
       rake (>= 13)
     googleapis-common-protos-types (1.16.0)
       google-protobuf (>= 3.18, < 5.a)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
-    opentelemetry-api (1.1.0)
+    opentelemetry-api (1.4.0)
     opentelemetry-common (0.21.0)
       opentelemetry-api (~> 1.0)
     opentelemetry-exporter-otlp (0.29.0)
@@ -77,9 +66,13 @@ GEM
       opentelemetry-metrics-sdk (~> 0.2)
       opentelemetry-sdk (~> 1.2)
       opentelemetry-semantic_conventions
-    opentelemetry-metrics-api (0.1.0)
+    opentelemetry-metrics-api (0.1.1)
       opentelemetry-api (~> 1.0)
-    opentelemetry-registry (0.3.0)
+    opentelemetry-metrics-sdk (0.3.0)
+      opentelemetry-api (~> 1.1)
+      opentelemetry-metrics-api (~> 0.1.1)
+      opentelemetry-sdk (~> 1.2)
+    opentelemetry-registry (0.3.1)
       opentelemetry-api (~> 1.1)
     opentelemetry-sdk (1.5.0)
       opentelemetry-api (~> 1.1)
@@ -88,7 +81,7 @@ GEM
       opentelemetry-semantic_conventions
     opentelemetry-semantic_conventions (1.10.1)
       opentelemetry-api (~> 1.0)
-    rack (2.2.9)
+    rack (2.2.10)
     rack-protection (3.0.6)
       rack
     rake (13.2.1)
@@ -116,7 +109,7 @@ DEPENDENCIES
   opentelemetry-instrumentation-base!
   opentelemetry-instrumentation-rack!
   opentelemetry-instrumentation-sinatra!
-  opentelemetry-metrics-sdk!
+  opentelemetry-metrics-sdk
   opentelemetry-sdk
   sinatra (~> 3.0.6)
   thin (~> 1.8.2)

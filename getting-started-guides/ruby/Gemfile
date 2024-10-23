@@ -8,7 +8,7 @@ gem 'sinatra', '~> 3.0.6'
 gem 'thin', '~> 1.8.2'
 
 gem 'opentelemetry-sdk'
-gem 'opentelemetry-metrics-sdk', github: 'kaylareopelle/opentelemetry-ruby', branch: 'temporality-preference-fix', glob: 'metrics_sdk/*.gemspec'
+gem 'opentelemetry-metrics-sdk'
 gem 'opentelemetry-exporter-otlp'
 gem 'opentelemetry-exporter-otlp-metrics'
 gem 'opentelemetry-instrumentation-base', github: 'kaylareopelle/opentelemetry-ruby-contrib', branch: 'metrics-prototype-for-sinatra', glob: 'instrumentation/base/*.gemspec'
